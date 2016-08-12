@@ -12,45 +12,38 @@
     </head>
     <body>
 
-        <header>
-            <h1>Hangman!</h1>
-        </header>
-
         <main>
 
+            <header>
+                <h1>Hangman!</h1>
+            </header>
+
             <section>
-                <h2>Current Word</h2>
+                <p id='result'></p>
 
                 <figure id='current-word'></figure>
 
-                <aside id='guesses'></aside>
+                <aside>
+                    (Missed: <span id='missed'></span>)
+                    Guessed: <span id='guesses'></span>
+                </aside>
             </section>
 
             <aside class='actions'>
-                <div>
-                    <input type='text' id='letter'>
-                    <button id='guess'>Guess Letter</button>
-                </div>
-
-                <div>
-                    <input type='text' id='word' placeholder='Word...'>
-                    <button id='solve'>Solve Word</button>
-                </div>
-
-                <div>
-                    <button id='new-game'>New Game</button>
-                </div>
-
+                <input type='text' id='letter' maxlength='1'>
+                <button id='guess'>Guess Letter</button>
+                <button id='new-game'>New Game</button>
             </aside>
-        </main>
 
-        <footer>
-            <p>
-                This game was created to practice JavaScript skills during a
-                <a href='https://github.com/TIYDC/crash-course-js-hangman'>crash course</a> at
-                <a href='http://theironyard.com'>The Iron Yard</a>.
-            </p>
-        </footer>
+            <footer>
+                <p>
+                    This game was created to practice JavaScript skills during a
+                    <a href='https://github.com/TIYDC/crash-course-js-hangman'>crash course</a> at
+                    <a href='http://theironyard.com'>The Iron Yard</a>.
+                </p>
+            </footer>
+
+        </main>
 
         <script src='words.js'></script>
         <script src='hangman.js'></script>
