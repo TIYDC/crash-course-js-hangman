@@ -65,8 +65,7 @@ function checkGameStatus() {
 
         document.getElementById('result').innerText = 'YOU LOSE!';
         display = selectedWord.split('');
-
+        updateDisplay();
+        
     }
-
-    updateDisplay();
 }
